@@ -1,0 +1,10 @@
+<h1>Restaurants list</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+  <li><%= restaurant.name %>
+    <%= link_to 'details',restaurant_path(restaurant) %>
+    <%= link_to 'edit',edit_restaurant_path(restaurant) %>
+    <%= link_to 'delete',restaurant_path(restaurant), method: :delete%></li>
+  <% end %>
+</ul>
